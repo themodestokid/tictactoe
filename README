@@ -1,0 +1,8 @@
+# tictactoe
+tic-tac-toe game for Recurse Center application
+
+# build executable
+make tictactoe
+
+# show options
+./tictactoe -h
