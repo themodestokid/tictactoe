@@ -47,8 +47,8 @@ class Trace
 public:
 	Trace(): trace(false) {}
 	void Set(bool t) { trace = t; }
-		// use cast operator? for better looking code.
 	bool IsSet() const { return trace; }
+		// use cast operator? for better looking code.
 	ostream &s() { return trace ? cerr : nullf; }
 };
 
@@ -419,13 +419,6 @@ int main(int argc, char **argv)
 		Board board;
 		Player computer(controller.ComputerToken(), controller.UserToken());
 
-		const ThreeCell *p;
-		p = board.FindWin('X');
-		p = board.FindWin('O');
-		p = board.FindPotentialWin('X', 1);
-		p = board.FindPotentialWin('O', 1);
-		p = board.FindPotentialWin('X', 2);
-		p = board.FindPotentialWin('O', 2);
 		if (controller.ComputerToken() == firstToken) {
 			board.Play(controller.ComputerToken(), computer.TakeMove(board));
 		}
